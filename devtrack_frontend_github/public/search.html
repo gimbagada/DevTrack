@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTrack - Search Programs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Additional styles specific to search page */
+        .search-container {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .search-bar {
+            display: flex;
+            margin-bottom: var(--space-md);
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: var(--space-md);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--radius-md) 0 0 var(--radius-md);
+            font-size: var(--font-size-md);
+        }
+        
+        .search-button {
+            background-color: var(--cool-seafoam);
+            color: white;
+            border: none;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 0 var(--space-lg);
+            cursor: pointer;
+        }
+        
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+        
+        .filter-chip {
+            background-color: var(--olive-mist);
+            color: var(--slate-charcoal);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .filter-chip.active {
+            background-color: var(--cool-seafoam);
+            color: white;
+        }
+        
+        .search-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        @media (max-width: 768px) {
+            .search-results {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">DevTrack</div>
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Dashboard</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Search</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Calendar</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <section id="search" class="search-section">
+            <h1>Find Programs & Events</h1>
+            
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search events, programs, workshops...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="filter-container">
+                    <div class="filter-chip active">All</div>
+                    <div class="filter-chip">Web Development</div>
+                    <div class="filter-chip">Data Science</div>
+                    <div class="filter-chip">UX Design</div>
+                    <div class="filter-chip">Mobile Development</div>
+                    <div class="filter-chip">AI & Machine Learning</div>
+                </div>
+                
+                <div class="filter-container">
+                    <div class="filter-chip">Date: Any</div>
+                    <div class="filter-chip">Location: Any</div>
+                    <div class="filter-chip">Format: Any</div>
+                    <div class="filter-chip">Organization: Any</div>
+                </div>
+            </div>
+            
+            <div class="search-results">
+                <div class="card">
+                    <h3 class="card-title">Web Development Bootcamp</h3>
+                    <p class="card-subtitle">June 15, 2025 • 10:00 AM - 4:00 PM</p>
+                    <p class="card-content">Learn modern web development techniques with hands-on projects and expert guidance.</p>
+                    <div class="card-footer">
+                        <span class="badge badge-secondary">Registered</span>
+                        <a href="program-details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Data Science Workshop</h3>
+                    <p class="card-subtitle">June 22, 2025 • 9:00 AM - 2:00 PM</p>
+                    <p class="card-content">Explore data analysis techniques and machine learning fundamentals with practical examples.</p>
+                    <div class="card-footer">
+                        <span class="badge badge-info">Recommended</span>
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">UX Design Principles</h3>
+                    <p class="card-subtitle">July 5, 2025 • 1:00 PM - 5:00 PM</p>
+                    <p class="card-content">Master the fundamentals of user experience design with industry professionals.</p>
+                    <div class="card-footer">
+                        <span class="badge badge-primary">New</span>
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Mobile App Development</h3>
+                    <p class="card-subtitle">July 12, 2025 • 10:00 AM - 3:00 PM</p>
+                    <p class="card-content">Build cross-platform mobile applications using React Native and modern tools.</p>
+                    <div class="card-footer">
+                        <span class="badge badge-primary">New</span>
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">AI for Developers</h3>
+                    <p class="card-subtitle">July 18, 2025 • 9:00 AM - 4:00 PM</p>
+                    <p class="card-content">Integrate AI capabilities into your applications with practical implementation techniques.</p>
+                    <div class="card-footer">
+                        <span class="badge badge-info">Recommended</span>
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Cloud Architecture Workshop</h3>
+                    <p class="card-subtitle">July 25, 2025 • 10:00 AM - 2:00 PM</p>
+                    <p class="card-content">Design scalable and resilient cloud infrastructure for modern applications.</p>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul class="bottom-nav-list">
+            <li class="bottom-nav-item">
+                <a href="index.html" class="bottom-nav-link">
+                    <i class="fas fa-home bottom-nav-icon"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link active">
+                    <i class="fas fa-search bottom-nav-icon"></i>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link">
+                    <i class="fas fa-calendar bottom-nav-icon"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link">
+                    <i class="fas fa-user bottom-nav-icon"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // Search page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter chip functionality
+            const filterChips = document.querySelectorAll('.filter-chip');
+            
+            filterChips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    // If it's in the first filter container (categories)
+                    if (this.parentElement === document.querySelectorAll('.filter-container')[0]) {
+                        // Remove active class from all chips in this container
+                        this.parentElement.querySelectorAll('.filter-chip').forEach(c => {
+                            c.classList.remove('active');
+                        });
+                        
+                        // Add active class to clicked chip
+                        this.classList.add('active');
+                    } else {
+                        // For other filter containers, just toggle active state
+                        this.classList.toggle('active');
+                    }
+                    
+                    // In a real app, this would trigger a search with the selected filters
+                    console.log('Filter selected:', this.textContent.trim());
+                });
+            });
+            
+            // Search functionality
+            const searchButton = document.querySelector('.search-button');
+            const searchInput = document.querySelector('.search-input');
+            
+            searchButton.addEventListener('click', function() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    console.log('Searching for:', searchTerm);
+                    // In a real app, this would trigger a search with the input term
+                }
+            });
+            
+            // Allow search on Enter key
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchButton.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

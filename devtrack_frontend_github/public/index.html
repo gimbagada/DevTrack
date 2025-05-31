@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTrack - Development Programs Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">DevTrack</div>
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link active">Dashboard</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Search</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Calendar</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <section id="dashboard" class="dashboard-section">
+            <h1>My Dashboard</h1>
+            
+            <div class="row mt-4">
+                <div class="col">
+                    <h2>Upcoming Programs</h2>
+                    <div class="card">
+                        <h3 class="card-title">Web Development Bootcamp</h3>
+                        <p class="card-subtitle">June 15, 2025 • 10:00 AM - 4:00 PM</p>
+                        <p class="card-content">Learn modern web development techniques with hands-on projects and expert guidance.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-secondary">Registered</span>
+                            <button class="btn btn-primary">View Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title">Data Science Workshop</h3>
+                        <p class="card-subtitle">June 22, 2025 • 9:00 AM - 2:00 PM</p>
+                        <p class="card-content">Explore data analysis techniques and machine learning fundamentals with practical examples.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-info">Recommended</span>
+                            <button class="btn btn-primary">View Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="card-title">UX Design Principles</h3>
+                        <p class="card-subtitle">July 5, 2025 • 1:00 PM - 5:00 PM</p>
+                        <p class="card-content">Master the fundamentals of user experience design with industry professionals.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-primary">New</span>
+                            <button class="btn btn-primary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <h2>My Calendar</h2>
+                    <div class="card p-4">
+                        <div class="calendar-header">
+                            <h3>June 2025</h3>
+                            <div>
+                                <button class="btn btn-outline"><i class="fas fa-chevron-left"></i></button>
+                                <button class="btn btn-outline"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <table class="calendar-table">
+                            <thead>
+                                <tr>
+                                    <th>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Calendar days would be dynamically generated -->
+                                <!-- This is a static representation -->
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td class="calendar-day-highlight">15</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td class="calendar-day-highlight">22</td>
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                </tr>
+                                <tr>
+                                    <td>30</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h2 class="mt-4">Notifications</h2>
+                    <div class="card">
+                        <div class="notification-item">
+                            <div class="notification-icon"><i class="fas fa-bell"></i></div>
+                            <div class="notification-content">
+                                <p class="notification-text">Reminder: Web Development Bootcamp starts in 3 days</p>
+                                <p class="notification-time">2 hours ago</p>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item">
+                            <div class="notification-icon"><i class="fas fa-user-plus"></i></div>
+                            <div class="notification-content">
+                                <p class="notification-text">New connection request from Jane Smith</p>
+                                <p class="notification-time">Yesterday</p>
+                            </div>
+                        </div>
+                        
+                        <div class="notification-item">
+                            <div class="notification-icon"><i class="fas fa-calendar-plus"></i></div>
+                            <div class="notification-content">
+                                <p class="notification-text">New program recommendation: Mobile App Development</p>
+                                <p class="notification-time">2 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul class="bottom-nav-list">
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link active">
+                    <i class="fas fa-home bottom-nav-icon"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link">
+                    <i class="fas fa-search bottom-nav-icon"></i>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link">
+                    <i class="fas fa-calendar bottom-nav-icon"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link">
+                    <i class="fas fa-user bottom-nav-icon"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

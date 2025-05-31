@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTrack - User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Additional styles specific to profile page */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--olive-mist);
+            margin-right: var(--space-lg);
+        }
+        
+        .profile-info h1 {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .profile-title {
+            color: var(--dark-gray);
+            font-size: var(--font-size-md);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .event-history-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .event-history-item:last-child {
+            border-bottom: none;
+        }
+        
+        .event-history-details {
+            flex: 1;
+        }
+        
+        .event-history-title {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .event-history-meta {
+            color: var(--dark-gray);
+            font-size: var(--font-size-sm);
+        }
+        
+        .event-history-status {
+            margin-left: var(--space-md);
+        }
+        
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .stat-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .stat-number {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--cool-seafoam);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .stat-label {
+            color: var(--slate-charcoal);
+            font-size: var(--font-size-sm);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-avatar {
+                margin-right: 0;
+                margin-bottom: var(--space-md);
+            }
+            
+            .profile-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">DevTrack</div>
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Dashboard</a></li>
+                    <li class="nav-item"><a href="search.html" class="nav-link">Search</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Calendar</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link active">Profile</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <section id="profile" class="profile-section">
+            <div class="profile-header">
+                <img src="https://via.placeholder.com/150" alt="User Avatar" class="profile-avatar">
+                <div class="profile-info">
+                    <h1>Alex Johnson</h1>
+                    <p class="profile-title">Software Developer at TechCorp</p>
+                    <div class="profile-actions">
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-file-export"></i> Export CV/Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Events Attended</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Upcoming Events</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Connections</div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-8">
+                    <div class="card">
+                        <h2>Event Participation</h2>
+                        
+                        <h3 class="mt-3">Upcoming Events</h3>
+                        <div class="event-history">
+                            <div class="event-history-item">
+                                <div class="event-history-details">
+                                    <div class="event-history-title">Web Development Bootcamp</div>
+                                    <div class="event-history-meta">June 15, 2025 • Tech Innovation Center</div>
+                                </div>
+                                <div class="event-history-status">
+                                    <span class="badge badge-secondary">Registered</span>
+                                </div>
+                            </div>
+                            <div class="event-history-item">
+                                <div class="event-history-details">
+                                    <div class="event-history-title">Data Science Workshop</div>
+                                    <div class="event-history-meta">June 22, 2025 • Online</div>
+                                </div>
+                                <div class="event-history-status">
+                                    <span class="badge badge-secondary">Registered</span>
+                                </div>
+                            </div>
+                            <div class="event-history-item">
+                                <div class="event-history-details">
+                                    <div class="event-history-title">UX Design Principles</div>
+                                    <div class="event-history-meta">July 5, 2025 • Design Studio</div>
+                                </div>
+                                <div class="event-history-status">
+                                    <span class="badge badge-secondary">Registered</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="mt-4">Past Events</h3>
+                        <div class="event-history">
+                            <div class="event-history-item">
+                                <div class="event-history-details">
+                                    <div class="event-history-title">JavaScript Fundamentals</div>
+                                    <div class="event-history-meta">May 10, 2025 • Tech Hub</div>
+                                </div>
+                                <div class="event-history-status">
+                                    <span class="badge badge-info">Attended</span>
+                                </div>
+                            </div>
+                            <div class="event-history-item">
+                                <div class="event-history-details">
+                                    <div class="event-history-title">React Advanced Patterns</div>
+                                    <div class="event-history-meta">April 22, 2025 • Online</div>
+                                </div>
+                                <div class="event-history-status">
+                                    <span class="badge badge-info">Attended</span>
+                                </div>
+                            </div>
+                            <div class="event-history-item">
+                                <div class="event-history-details">
+                                    <div class="event-history-title">Cloud Computing Essentials</div>
+                                    <div class="event-history-meta">March 15, 2025 • Tech Conference Center</div>
+                                </div>
+                                <div class="event-history-status">
+                                    <span class="badge badge-info">Attended</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-4">
+                    <div class="card">
+                        <h2>Personal Information</h2>
+                        <div class="profile-details">
+                            <p><strong>Email:</strong> alex.johnson@example.com</p>
+                            <p><strong>Location:</strong> San Francisco, CA</p>
+                            <p><strong>Industry:</strong> Technology</p>
+                            <p><strong>Experience:</strong> 5+ years</p>
+                            <p><strong>Skills:</strong> JavaScript, React, Node.js, Python</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mt-4">
+                        <h2>Connections</h2>
+                        <div class="connection-list">
+                            <div class="connection-item">
+                                <img src="https://via.placeholder.com/40" alt="Connection" class="connection-avatar">
+                                <div class="connection-info">
+                                    <div class="connection-name">Sarah Williams</div>
+                                    <div class="connection-title">UX Designer</div>
+                                </div>
+                            </div>
+                            <div class="connection-item">
+                                <img src="https://via.placeholder.com/40" alt="Connection" class="connection-avatar">
+                                <div class="connection-info">
+                                    <div class="connection-name">Michael Chen</div>
+                                    <div class="connection-title">Data Scientist</div>
+                                </div>
+                            </div>
+                            <div class="connection-item">
+                                <img src="https://via.placeholder.com/40" alt="Connection" class="connection-avatar">
+                                <div class="connection-info">
+                                    <div class="connection-name">Emily Rodriguez</div>
+                                    <div class="connection-title">Frontend Developer</div>
+                                </div>
+                            </div>
+                            <div class="connection-item">
+                                <img src="https://via.placeholder.com/40" alt="Connection" class="connection-avatar">
+                                <div class="connection-info">
+                                    <div class="connection-name">David Kim</div>
+                                    <div class="connection-title">Product Manager</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-outline">View All Connections</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul class="bottom-nav-list">
+            <li class="bottom-nav-item">
+                <a href="index.html" class="bottom-nav-link">
+                    <i class="fas fa-home bottom-nav-icon"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="search.html" class="bottom-nav-link">
+                    <i class="fas fa-search bottom-nav-icon"></i>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link">
+                    <i class="fas fa-calendar bottom-nav-icon"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="#" class="bottom-nav-link active">
+                    <i class="fas fa-user bottom-nav-icon"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
